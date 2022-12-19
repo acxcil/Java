@@ -1,4 +1,4 @@
-package Java.TipCalculator;
+package Java.EnhancedTipCalculator;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -28,15 +28,22 @@ public class Controller {
     @FXML
     private Text totalTextField;
     @FXML
+    private TextField groupTextField;
+    @FXML
+    private Text totalEachTextField;
+    @FXML
     private void calculateButtonPressed(ActionEvent event) {
         try {
             BigDecimal amount = new BigDecimal(amountTextField.getText());
+            BigDecimal group = new BigDecimal(groupTextField.getText());
             if (amount.floatValue() < 0) amountTextField.setText("Input non-negative value");
+            else if (group.intValue() < 1) groupTextField.setText("Input 1 or >");
             else {
                 BigDecimal tip = amount.multiply(tipPercentage);
                 BigDecimal total = amount.add(tip);
                 tipTextField.setText(currency.format(tip));
                 totalTextField.setText(currency.format(total));
+                totalEachTextField.setText(String.format("%.2f", total.floatValue() / group.intValue()));
             }
 
         } catch (NumberFormatException ex) {
@@ -58,4 +65,3 @@ public class Controller {
         );
     }
 }
-

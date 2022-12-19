@@ -1,4 +1,4 @@
-package Java.TipCalculator;
+package Java.EnhancedTipCalculator;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Tip Calculator");
+        primaryStage.setTitle("EnhancedTipCalculator");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
@@ -20,5 +20,3 @@ public class Main extends Application {
         launch(args);
     }
 }
-
-
