@@ -1,4 +1,4 @@
-package ContactsModifiedApp;
+package Java.ContactsModifiedApp;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -33,7 +33,7 @@ public class ContactsModifiedController {
     private final ObservableList<ContactsModifiedDetails> students = FXCollections.observableArrayList();
 
     public void initialize(){
-        students.add(new ContactsModifiedDetails("bashir", "Alam", "bsdhirlar@gmail.com", "+993563493", "ContactsModifiedApp/profile_img/bashir.jpg"));
+        students.add(new ContactsModifiedDetails("Aelina", "Daniiar", "aelinadaniiar@gmail.com", "+996500349310", "Java/ContactsModifiedApp/profile_img/aelina.jpg"));
 
 
 

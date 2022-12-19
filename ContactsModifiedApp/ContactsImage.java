@@ -1,4 +1,4 @@
-package ContactsModifiedApp;
+package Java.ContactsModifiedApp;
 
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;

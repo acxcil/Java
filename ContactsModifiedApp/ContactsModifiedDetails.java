@@ -1,4 +1,4 @@
-package ContactsModifiedApp;
+package Java.ContactsModifiedApp;
 
 public class ContactsModifiedDetails {
     private String name;
